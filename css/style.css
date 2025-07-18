@@ -1,7 +1,5 @@
 /* ========== RESET & GLOBAL STYLES ========== */
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,9 +11,6 @@ body {
   line-height: 1.6;
   background-color: #ffffff;
   color: #333;
-  overflow-x: hidden;
-  width: 100%;
-  max-width: 100vw;
 }
 
 .btn {
@@ -129,29 +124,14 @@ nav,
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 3rem;
   max-width: 1200px;
   width: 100%;
   flex-wrap: wrap;
 }
 
-.hero .container > * {
-  min-width: 0;
-  max-width: 100%;
-}
-
-.hero .container img {
-  flex: 1;
-  max-width: 500px;
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}
-
 .he-t {
-  flex: 1;
   max-width: 600px;
-  margin-right: 40px;
 }
 
 .hero h1 {
@@ -268,7 +248,7 @@ body {
 /* ========== ABOUT SECTION ========== */
 .container-abt {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
   padding: 100px 20px 50px;
@@ -293,9 +273,14 @@ body {
   justify-content: center;
 }
 
+.about-images .col-left {
+  flex-direction: column;
+  margin-top: 60px;
+}
+
 .about-images .col-left img {
   width: 100%;
-  max-width: 100%;
+  max-width: 300px;
   height: 450px;
   object-fit: cover;
   border-radius: 20px;
@@ -310,7 +295,7 @@ body {
 
 .about-images .col-right img {
   width: 100%;
-  max-width: 100%;
+  max-width: 300px;
   height: 400px;
   object-fit: inherit;
   border-radius: 12px;
@@ -349,6 +334,7 @@ body {
   flex: 1 1 40%;
   max-width: 600px;
   padding-left: 20px;
+  margin-top: 20px;
 }
 
 .abt-h2 {
@@ -540,7 +526,7 @@ footer a {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 0 10px;
+    padding: 0 20px;
     width: 100%;
   }
 
@@ -608,25 +594,5 @@ footer a {
 
   .col-r-div h3 {
     font-size: 15px;
-  }
-}
-
-/* ===================== HERO SECTION MOBILE LAYOUT ===================== */
-@media (max-width: 768px) {
-  .hero .container {
-    flex-direction: column-reverse;
-    gap: 20px; /* Space between image and text */
-    align-items: center;
-  }
-
-  .hero .container img {
-    width: 100%;
-    max-width: 90%;
-    height: auto;
-  }
-
-  .he-t {
-    text-align: center;
-    padding: 0 15px;
   }
 }
