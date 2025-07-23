@@ -342,6 +342,7 @@ body {
   font-size: 1rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-bottom: 0.5rem;
+  display: inline-block;
 }
 
 .abt-h3 {
@@ -360,8 +361,6 @@ body {
   font-family: sans-serif;
 }
 
-/* ========== ABOUT SECTION END ========== */
-
 /* ========== SERVICES SECTION ========== */
 .services {
   background-color: #f0f4fc;
@@ -371,9 +370,56 @@ body {
 
 .services .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 2rem;
+}
+
+.services .bg-blur {
+  padding: 40px;
+  padding-top: 20px;
+  background: rgba(255, 255, 255, 0.369);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
+.heading-with-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.heading-content {
+  flex: 2;
+  max-width: fit-content;
+}
+
+.vertical-line-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 200px;
+}
+
+.vertical-line {
+  width: 3px;
+  height: 100px;
+  background-color: #1c1c1c;
+  margin-top: 60px;
+  margin-left: 15%;
+}
+
+.line-text {
+  color: #4a4a4a;
+  font-size: 18px;
+  max-width: 500px;
+  margin-top: 60px;
+  margin-left: 50px;
 }
 
 .ser-h3 {
@@ -391,12 +437,7 @@ body {
   background-color: white;
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
+  height: auto;
 }
 
 .card h3 {
@@ -410,28 +451,126 @@ body {
   font-size: 0.95rem;
 }
 
+.features .card img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+.features .out {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 /* ========== COMMON QUESTIONS ========== */
 #common-questions {
   padding: 3rem 2rem;
   background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 #common-questions h2 {
   font-size: 2rem;
   color: #141d3a;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
-#common-questions details {
-  margin: 1rem 0;
-  background-color: #f4f6fb;
+#common-questions p {
+  color: #555;
+}
+
+.faq-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.faq-col details {
+  background: #f4f6fb;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: background 0.3s;
 }
 
-#common-questions summary {
+.faq-col details:hover {
+  background: #ebeff6;
+}
+
+.faq-col summary {
   font-weight: 600;
+  font-size: 20px;
   cursor: pointer;
+  position: relative;
+  padding-right: 30px;
+  list-style: none;
+}
+
+.faq-col summary::marker {
+  display: none;
+}
+
+.faq-col summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-col details[open] summary::after {
+  content: '−';
+}
+
+.faq-col details p {
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  font-size: 18px;
+  color: #333;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  font-family: sans-serif;
+}
+
+.faq-col details[open] p {
+  max-height: 200px;
+  opacity: 1;
+}
+
+#common-questions h3 {
+  margin-top: 2rem;
+  text-align: center;
+  color: #141d3a;
+}
+
+.faq-contact-link {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #3650fa;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.faq-contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-columns {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ========== CONTACT SECTION ========== */
@@ -460,7 +599,6 @@ footer a {
   margin: 0 5px;
 }
 
-/* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
 /* ===================== 1024px and below ===================== */
 @media (max-width: 1024px) {
   .hero .container {
@@ -494,7 +632,8 @@ footer a {
   .about-images .col-left img,
   .about-images .col-right img {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    /* Slightly larger than previous 250px */
     height: auto;
     border-radius: 16px;
   }
@@ -515,7 +654,24 @@ footer a {
 
   .col-r-div {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .services .features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .features .card img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .card {
+    height: auto;
   }
 }
 
@@ -537,18 +693,19 @@ footer a {
   }
 
   .about-images .col-left img,
-  .about-images .col-right img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-  }
+.about-images .col-right img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 16px;
+}
 
-  .col-r-div {
-    width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
-  }
+.col-r-div {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  text-align: center;
+}
 
   .about-text {
     padding: 20px;
@@ -563,6 +720,48 @@ footer a {
     font-size: 1rem;
     padding: 0 5px;
   }
+
+  .services .features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .services .heading-with-line {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .services .ser-h3 {
+    text-align: center;
+    padding-left: 0;
+    font-size: 2rem;
+  }
+
+  .vertical-line-section {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .vertical-line {
+    width: 100px;
+    height: 3px;
+    background-color: #1c1c1c;
+    margin: 0 auto;
+  }
+
+  .line-text {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .features .card img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 
@@ -574,13 +773,20 @@ footer a {
 
   .about-images .col-left img,
   .about-images .col-right img {
-    width: 100%;
-    height: auto;
+    width: 70% !important;
+    max-width: 200px !important;
+    height: auto !important;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
   }
 
   .col-r-div {
-    width: 100%;
+    width: 80% !important;
+    max-width: 200px !important;
     padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .about-text .abt-p {
@@ -595,4 +801,27 @@ footer a {
   .col-r-div h3 {
     font-size: 15px;
   }
+
+  .features .card {
+    padding: 1rem;
+  }
+
+  .features .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .features .card p {
+    font-size: 0.9rem;
+  }
+
+  .features .card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
 }
