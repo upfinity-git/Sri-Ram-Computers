@@ -5,13 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Sri Ram Computers</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="icon" href="images/logo.jpg" type="image/x-icon">
 </head>
 
 <body>
 
   <nav>
     <div class="nav-container">
-      <img class="logo" src="images/logo.jpg" alt="Logo">
+      <a href="index.html"><img class="logo" src="images/logo.jpg" alt="Logo"></a>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="index.html#about">About Us</a>
@@ -21,37 +23,57 @@
     </div>
   </nav>
 
-  <h2>Contact Us</h2>
+  <header class="hero" id="home">
+    <h1>Contact Us</h1>
+    <p>We are here to assist you with all your IT needs. Reach out to us today!</p>
+  </header>
 
-  <form action="" method="post"> <!--Add value to action attribute later-->
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required /><br />
+  <section id="contact-info">
+    <div class="contact-layout">
 
-    <label for="contact">Mobile Number</label>
-    <input type="tel" id="contact" name="contact" required /><br />
+      <!-- Left Side: Image -->
+      <div class="image-container">
+        <img class="image" src="img/contact.png" alt="Contact Us" />
+      </div>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required /><br />
+      <!-- Right Side: Heading + Form -->
+      <div class="form-container">
+        <h2 class="body-head">Get in Touch</h2>
 
-    <label for="inquiry">Please select the service you need:</label>
-    <select id="inquiry" name="inquiry">
-      <option value="" disabled selected>please select a service</option>
-      <option value="rentals">Computer & Laptop Rentals</option>
-      <option value="amc">Annual Maintenance Contracts (AMC)</option>
-      <option value="printer">Printer Services</option>
-      <option value="networking">Networking Solutions</option>
-      <option value="cctv">CCTV Installation</option>
-      <option value="custom-pc">Custom PC Builds</option>
-      <option value="refurbished-pc">Refurbished PC Sales</option>
-      <option value="support">On site & Remote Support</option>
-    </select> <br />
+        <form action="" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message here..."
-      required></textarea><br />
+          <label for="contact">Mobile Number</label>
+          <input type="tel" id="contact" name="contact" required />
 
-    <button type="submit">Send inquiry</button>
-  </form>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="inquiry">Please select the service you need:</label>
+          <select id="inquiry" name="inquiry">
+            <option value="" disabled selected>please select a service</option>
+            <option value="rentals">Computer & Laptop Rentals</option>
+            <option value="amc">Annual Maintenance Contracts (AMC)</option>
+            <option value="printer">Printer Services</option>
+            <option value="networking">Networking Solutions</option>
+            <option value="cctv">CCTV Installation</option>
+            <option value="custom-pc">Custom PC Builds</option>
+            <option value="refurbished-pc">Refurbished PC Sales</option>
+            <option value="support">On site & Remote Support</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
+
+          <p>We respect your right to privacy and ensure no data is collected unless explicitly authorized.</p>
+
+          <button type="submit">Send inquiry</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
 
   <footer>
     <p> © 2025 Sri Ram Computer. All rights reserved. Built with precision. Powered by Themeoption.</p>
@@ -60,19 +82,18 @@
       <a href="https://www.instagram.com/sriramcomputers_chennai/?utm_source=ig_web_button_share_sheet"
         target="_blank">Instagram</a>
       <a href="mailto:admin@sriramcomputers.in" target="_blank">Mail: admin@sriramcomputers.in</a>
-      <a href="tel:+9194441 14331">+9194441 14331</a> <br> | <a href="tel:044 24718226">044 24718226</a>
-
-
+      <a href="tel:+919444114331">+91 94441 14331</a> | <a href="tel:04424718226">044 24718226</a>
     </p>
+
     <p>Services</p>
     <ul>
-      <li><a href="#">Network Protection</a></li>
-      <li><a href="#">Server Protection</a></li>
-      <li><a href="#">Vulnerability Assessment</a></li>
-      <li><a href="#">SPAM Protection</a></li>
+      <li>Network Protection</li>
+      <li>Server Protection</li>
+      <li>Vulnerability Assessment</li>
+      <li>SPAM Protection</li>
     </ul>
   </footer>
-</body>
 
+</body>
 
 </html>
