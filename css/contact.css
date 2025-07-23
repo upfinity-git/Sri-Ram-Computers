@@ -1,0 +1,110 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #F0F8FF; 
+}
+
+.nav-container a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-decoration-thickness: 2px;
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.nav-container a:hover {
+    color: #5d3eff !important;
+    text-decoration: overline;
+    transition: color 0.3s, text-decoration 0.3s;
+
+}
+
+.hero {
+    background-color:	#F0F8FF; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    padding-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.contact-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:40px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 45%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.form-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-container h2 {
+    font-weight: bold;
+    font-size: 1.5rem;;
+    color: #5151f4;
+}
+
+form label {
+    font-weight: bold;
+    font-size: large;
+}
+
+form input, form textarea, form select {
+    padding: 10px;
+    font-size: 16px;
+    background-color: hsl(180, 50%, 99%);
+    border: 1.5px groove ;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    box-shadow: 0 0 5px rgba(93, 62, 255, 0.5);
+}
