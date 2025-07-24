@@ -25,10 +25,32 @@ body {
 }
 
 .nav-container a:hover {
-    color: #5d3eff !important;
-    text-decoration: overline;
-    transition: color 0.3s, text-decoration 0.3s;
+    color: #5d3eff;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+}
 
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding-top: 6px;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    height: 2px;
+    width: 0;
+    transition: width 0.5s ease;
+
+}
+
+.nav-links a:hover::before {
+    width: 90%;
+    background-color: #5d3eff;
 }
 
 .hero {
@@ -38,6 +60,7 @@ body {
     align-items: center;
     font-size: large;
     padding-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .hero h1 {
@@ -68,7 +91,7 @@ body {
 .image-container img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .form-container {
@@ -93,6 +116,11 @@ form label {
     font-size: large;
 }
 
+.highlight {
+    color: #5151f4;
+    font-weight: bold;
+}
+
 form input, form textarea, form select {
     padding: 10px;
     font-size: 16px;
@@ -105,6 +133,41 @@ form input, form textarea, form select {
 
 }
 
+form input:hover, form textarea:hover, form select:hover {
+    border-color: rgb(93, 62, 255);
+    box-shadow: 0 0 5px rgba(93, 62, 255, 0.3);
+}
+
 form input:focus, form textarea:focus, form select:focus {
     box-shadow: 0 0 5px rgba(93, 62, 255, 0.5);
+}
+
+.privacy-notice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.privacy-notice p {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.privacy-notice button {
+    background-color: #5151f4;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;;
+}
+
+.privacy-notice button:hover {
+    color: #5151f4;
+    background-color: white;
+    border: 1px solid #5151f4;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease
 }
