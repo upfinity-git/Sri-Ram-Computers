@@ -14,13 +14,13 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #F0F8FF; 
+    background: #F0F8FF;
 }
 
 .nav-container a {
     display: inline-block;
     text-decoration: none;
-    margin:0 0 0  18px;
+    margin: 0 0 0 18px;
     text-decoration-thickness: 2px;
     color: black;
     font-size: 16px;
@@ -51,12 +51,12 @@ body {
 }
 
 .nav-links a:hover::before {
-    width: 90%;
+    width: 100%;
     background-color: #5d3eff;
 }
 
 .hero {
-    background-color:	#F0F8FF; 
+    background-color: #F0F8FF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,7 +80,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    gap:40px;
+    gap: 40px;
     padding: 20px;
     flex-wrap: wrap;
 }
@@ -109,7 +109,8 @@ body {
 
 .form-container h2 {
     font-weight: bold;
-    font-size: 1.5rem;;
+    font-size: 1.5rem;
+    ;
     color: #5151f4;
 }
 
@@ -123,11 +124,13 @@ form label {
     font-weight: bold;
 }
 
-form input, form textarea, form select {
+form input,
+form textarea,
+form select {
     padding: 10px;
     font-size: 16px;
     background-color: hsl(180, 50%, 99%);
-    border: 1.5px groove ;
+    border: 1.5px groove;
     color: #333;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
@@ -135,12 +138,16 @@ form input, form textarea, form select {
 
 }
 
-form input:hover, form textarea:hover, form select:hover {
+form input:hover,
+form textarea:hover,
+form select:hover {
     border-color: rgb(93, 62, 255);
     box-shadow: 0 0 5px rgba(93, 62, 255, 0.3);
 }
 
-form input:focus, form textarea:focus, form select:focus {
+form input:focus,
+form textarea:focus,
+form select:focus {
     box-shadow: 0 0 5px rgba(93, 62, 255, 0.5);
 }
 
@@ -155,7 +162,8 @@ form input:focus, form textarea:focus, form select:focus {
     flex: 1;
     font-size: 0.9rem;
     color: #555;
-    padding-bottom: 50px;;
+    padding-bottom: 50px;
+    ;
 }
 
 .privacy-notice button {
@@ -164,7 +172,8 @@ form input:focus, form textarea:focus, form select:focus {
     border: none;
     height: 40px;
     width: 140px;
-    border-radius: 20px;;
+    border-radius: 20px;
+    ;
 }
 
 .privacy-notice button:hover {
@@ -176,32 +185,32 @@ form input:focus, form textarea:focus, form select:focus {
 }
 
 .contact {
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: #eaf1ff;
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #eaf1ff;
 }
 
 .contact h2 {
-  font-size: 2rem;
-  color: #0c1e3a;
-  margin: 1rem 0;
+    font-size: 2rem;
+    color: #0c1e3a;
+    margin: 1rem 0;
 }
 
 /* ========== FOOTER ========== */
 footer {
-  background-color: #0c1e3a;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  display: block;
-  unicode-bidi: isolate;
+    background-color: #0c1e3a;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    display: block;
+    unicode-bidi: isolate;
 }
 
 footer a {
-  color: #4fc3f7;
-  margin: 0 5px;
-  text-decoration: none;
-  position: relative;
+    color: #4fc3f7;
+    margin: 0 5px;
+    text-decoration: none;
+    position: relative;
 }
 
 footer a:hover {
@@ -209,11 +218,17 @@ footer a:hover {
     transition: color 0.3s ease;
 }
 
-
-footer li {
+footer ul {
+    align-items: center;
+    list-style-type: disc;
     list-style: none;
-    margin : 0 5px;
-    text-align: center;
-    padding-bottom: 5px;
+    padding: 0;
+    margin: 0;
 }
 
+
+footer li {
+    color: #4fc3f7;
+    margin: 0 5px;
+    padding-bottom: 5px;
+}

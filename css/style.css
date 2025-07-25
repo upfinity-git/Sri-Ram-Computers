@@ -696,19 +696,19 @@ footer a {
   }
 
   .about-images .col-left img,
-.about-images .col-right img {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
-  border-radius: 16px;
-}
+  .about-images .col-right img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 16px;
+  }
 
-.col-r-div {
-  width: 100%;
-  max-width: 260px;
-  margin: 0 auto;
-  text-align: center;
-}
+  .col-r-div {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
   .about-text {
     padding: 20px;
