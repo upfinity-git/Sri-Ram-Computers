@@ -597,7 +597,10 @@ footer {
 footer a {
   color: #4fc3f7;
   margin: 0 5px;
+  text-decoration: none;
 }
+
+
 
 /* ===================== 1024px and below ===================== */
 @media (max-width: 1024px) {
