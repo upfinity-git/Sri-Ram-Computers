@@ -175,13 +175,13 @@ form input:focus, form textarea:focus, form select:focus {
     transition: background-color 0.3s ease, transform 0.3s ease
 }
 
-#contact {
+.contact {
   padding: 4rem 2rem;
   text-align: center;
   background-color: #eaf1ff;
 }
 
-#contact h2 {
+.contact h2 {
   font-size: 2rem;
   color: #0c1e3a;
   margin: 1rem 0;
