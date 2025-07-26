@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -46,8 +51,7 @@ body {
     left: 0%;
     height: 2px;
     width: 0;
-    transition: width 0.5s ease;
-
+    transition: width 0.5s ease, background-color 0.5s ease;
 }
 
 .nav-links a:hover::before {
@@ -61,24 +65,24 @@ body {
     flex-direction: column;
     align-items: center;
     font-size: large;
-    padding-bottom: 50px;
-    margin-bottom: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 8px;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 1rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .contact-layout {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     gap: 40px;
     padding: 20px;
@@ -87,7 +91,7 @@ body {
 
 .image-container {
     flex: 1;
-    max-width: 45%;
+    max-width: 40%;
 }
 
 .image-container img {
@@ -98,20 +102,20 @@ body {
 
 .form-container {
     flex: 1;
-    max-width: 50%;
+    max-width: 40%;
 }
 
 .form-container form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .form-container h2 {
     font-weight: bold;
     font-size: 1.5rem;
-    ;
     color: #5151f4;
+    padding-bottom: 10px;
 }
 
 form label {
@@ -127,22 +131,22 @@ form label {
 form input,
 form textarea,
 form select {
-    padding: 10px;
+    padding: 8px;
     font-size: 16px;
     background-color: hsl(180, 50%, 99%);
-    border: 1.5px groove;
+    border: 1.5px inset;
     color: #333;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     box-sizing: border-box;
-
+    border-radius: 8px;
 }
 
 form input:hover,
 form textarea:hover,
 form select:hover {
-    border-color: rgb(93, 62, 255);
-    box-shadow: 0 0 5px rgba(93, 62, 255, 0.3);
+    border-color: rgb(122, 100, 229);
+    box-shadow: 0 0 5px rgba(122, 100, 229, 0.3);
 }
 
 form input:focus,
@@ -173,7 +177,7 @@ form select:focus {
     height: 40px;
     width: 140px;
     border-radius: 20px;
-    ;
+    cursor: pointer;
 }
 
 .privacy-notice button:hover {
@@ -181,7 +185,7 @@ form select:focus {
     background-color: white;
     border: 1px solid #5151f4;
     transform: scale(1.05);
-    transition: background-color 0.3s ease, transform 0.3s ease
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact {
