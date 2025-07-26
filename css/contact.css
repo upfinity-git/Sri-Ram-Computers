@@ -7,6 +7,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Navigation Bar */
 .nav-container {
     display: flex;
     flex-direction: row;
@@ -59,6 +60,8 @@ body {
     background-color: #5d3eff;
 }
 
+/* Hero Section */
+
 .hero {
     background-color: #F0F8FF;
     display: flex;
@@ -79,6 +82,8 @@ body {
     margin-bottom: 20px;
 }
 
+/* The contact layot */
+
 .contact-layout {
     display: flex;
     flex-direction: row;
@@ -88,6 +93,8 @@ body {
     padding: 20px;
     flex-wrap: wrap;
 }
+
+/* Image of the contact layout */
 
 .image-container {
     flex: 1;
@@ -99,6 +106,8 @@ body {
     height: auto;
     border-radius: 20px;
 }
+
+/* Form container of the contact layout */
 
 .form-container {
     flex: 1;
