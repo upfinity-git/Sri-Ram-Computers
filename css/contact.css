@@ -106,7 +106,7 @@ nav {
 
 .image-container {
     flex: 1;
-    max-width: 40%;
+    max-width: 30%;
 }
 
 .image-container img {
@@ -120,6 +120,7 @@ nav {
 .form-container {
     flex: 1;
     max-width: 40%;
+    margin-right: 18rem;
 }
 
 .form-container form {
