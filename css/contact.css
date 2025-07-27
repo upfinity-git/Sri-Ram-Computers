@@ -8,6 +8,14 @@ body {
 }
 
 /* Navigation Bar */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #F0F8FF;
+}
+
 .nav-container {
     display: flex;
     flex-direction: row;
