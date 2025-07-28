@@ -95,9 +95,9 @@ nav {
 .contact-layout {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
-    gap: 40px;
+    gap: 10rem;
     padding: 20px;
     flex-wrap: wrap;
 }
@@ -107,6 +107,7 @@ nav {
 .image-container {
     flex: 1;
     max-width: 30%;
+    margin-left: 9rem;
 }
 
 .image-container img {
