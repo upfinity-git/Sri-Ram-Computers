@@ -162,6 +162,12 @@ nav,
   border-radius: 15px;
 }
 
+.about-link {
+  display: flex;
+  justify-content: center;
+}
+
+
 .button {
   padding-top: 20px;
   line-height: 1;
