@@ -30,7 +30,7 @@ nav {
     z-index: 1000;
     background: #F0F8FF;
 }
-
+ 
 .nav-container a {
     display: inline-block;
     text-decoration: none;
@@ -197,6 +197,12 @@ form select:focus {
     width: 140px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.privacy-notice button:active {
+     transform: scale(0.95);
+     transition: transform 0.1s ease;
+     box-shadow: 0 2px 5px rgba(0,0,0,2);
 }
 
 .privacy-notice button:hover {
