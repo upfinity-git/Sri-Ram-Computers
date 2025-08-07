@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Navigation Section */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #F0F8FF;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #F0F8FF;
+}
+
+.nav-container a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 0 0 18px;
+    text-decoration-thickness: 2px;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-container a:hover {
+    color: #5d3eff;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    height: 2px;
+    width: 0;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+    background-color: #5d3eff;
+}
+
+/* Hero Section */
+
+.hero {
+    background-color: #F0F8FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    padding-bottom: 8rem;;
+    margin-bottom: 8px;
+}
+
+.hero h2 {
+    font-size: 3.7rem;
+}
+
+.hero p {
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.hero p span {
+    color: #0070f3;
+    font-weight: 600;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.about-container {
+    display: flex;
+}
+
+.text-container h3{
+   flex: 1;
+   text-align: center;
+   font-size: 2rem;
+   color: #000000;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   margin-bottom: 2rem;
+}
+
+.text-container p {
+    font-size: 1rem;
+}
