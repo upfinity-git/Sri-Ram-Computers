@@ -5,8 +5,13 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 html,
 body {
+  scroll-behavior: smooth;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   background-color: #ffffff;
@@ -59,7 +64,7 @@ nav {
   flex-wrap: wrap;
   padding-left: 15px;
   padding-right: 20px;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 20px;
   background-image: url("../img/nav-bg.jpg");
   background-size: cover;
@@ -68,7 +73,9 @@ nav {
 }
 
 .nav-logo {
-  height: 40px;
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-gap {
@@ -443,12 +450,13 @@ body {
   border-radius: 16px;
   padding: 1.5rem;
   height: auto;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transform:scale(1.02);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
 }
 .card h3 {
   color: #1e295c;
