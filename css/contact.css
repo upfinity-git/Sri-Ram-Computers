@@ -176,7 +176,15 @@ form select:focus {
 
 .mob-input-div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.mob-input-div p {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 5px;
+
 }
 
 .privacy-notice {

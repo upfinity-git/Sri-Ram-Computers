@@ -5,6 +5,7 @@
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: hsla(220, 100%, 98%, 0.841);
 }
 
 
@@ -29,7 +30,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #F0F8FF;
+    background:hsl(208, 86%, 92%);
 }
 
 .nav-container a {
@@ -72,7 +73,7 @@ nav {
 /* Hero Section */
 
 .hero {
-    background-color: #F0F8FF;
+    background-color: hsl(208, 86%, 92%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,4 +119,91 @@ nav {
 
 .text-container p {
     font-size: 1rem;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}    
+
+.text-container{
+    box-shadow: 2px 5px 20px rgb(92, 91, 91);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 70px;
+    background-color: white;
+}
+
+.image-container {
+    width: 100%;
+    height: auto;
+}
+
+.reason {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+}
+
+.reason-list {
+    background-color: hsla(208, 54%, 93%, 0.836);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 4px 4px 15px grey;
+}
+
+.reason h2 {
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+}
+
+.reason li {
+    font-size: 1.2rem;
+    margin-top: 20px;
+
+}
+
+.reason ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #0c1e3a;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+footer a {
+    color: #4fc3f7;
+    margin: 0 5px;
+    text-decoration: none;
+    position: relative;
+}
+
+footer a:hover {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+footer ul {
+    align-items: center;
+    list-style-type: disc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+footer li {
+    color: #4fc3f7;
+    margin: 0 5px;
+    padding-bottom: 5px;
 }
