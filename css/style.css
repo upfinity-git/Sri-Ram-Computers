@@ -178,12 +178,12 @@ nav,
   padding-right: 20px;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  background: rgba(255, 255, 255, 0.369);
+  background: #ffffff5e;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(1.4px);
   -webkit-backdrop-filter: blur(3px);
   border-radius: 15px;
-}
+} 
 
 .about-link {
   display: flex;
